@@ -1,37 +1,22 @@
-/* ===== SITE HEADER ===== */
-.site-header {
-    text-align: center;
-    margin-bottom: 28px;
-}
-
-.site-header h1 {
-    margin: 0;
-    font-size: 26px;
-    font-weight: 600;
-    color: #1e293b;
-}
-
-.site-header p {
-    margin-top: 8px;
-    font-size: 14px;
-    color: #64748b;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
+/* ===== BODY LAYOUT ===== */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background: #eef2ff;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     color: #1e293b;
 }
 
+/* ===== LINKS ===== */
 a {
     text-decoration: none;
     color: #2563eb;
@@ -41,9 +26,30 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ===== CONTAINER ===== */
+/* ===== SITE HEADER (TITLE OUTSIDE BOX) ===== */
+.site-header {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.site-header p {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #64748b;
+}
+
+/* ===== MAIN CONTAINER (WHITE BOX) ===== */
 .container {
     width: 520px;
+    max-width: calc(100% - 32px);
     background: #ffffff;
     padding: 36px 40px;
     border-radius: 16px;
