@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Notes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+
+    <div class="topbar">
+        <h2>Your Notes</h2>
+        <div class="actions">
+            <a class="btn" href="/create">Create note</a>
+            <a class="btn logout" href="/logout">Logout</a>
+        </div>
+    </div>
+
+    {% if notes %}
+    <ul class="note-list">
+        {% for n in notes %}
+        <li>
+            <a href="/note/{{ n[0] }}">
+            Encrypted Note {{ loop.index }}
+            </a>
+        </li>
+        {% endfor %}
+
+    </ul>
+    {% else %}
+        <p class="empty">You have no notes yet.</p>
+    {% endif %}
+
+</div>
+</body>
+</html>

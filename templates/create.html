@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Note</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Create Encrypted Note</h2>
+
+    <form method="POST">
+        <textarea name="message" placeholder="Write your note here..." required></textarea>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Note password"
+            required
+        >
+
+        <button type="submit">Create Note</button>
+    </form>
+
+    <a href="/notes" class="back">← Back to notes</a>
+
+</div>
+
+</body>
+</html>

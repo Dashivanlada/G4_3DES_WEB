@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decrypt Note</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+
+    <h2>Decrypt Encrypted Note</h2>
+
+    <form method="POST">
+        <input type="password" name="password" placeholder="Enter note password" required>
+        <button>Decrypt</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if text %}
+        <div class="note-box">{{ text }}</div>
+    {% endif %}
+
+    <a href="/notes" class="back">← Back to list</a>
+
+</div>
+</body>
+</html>
