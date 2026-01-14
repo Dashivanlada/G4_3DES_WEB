@@ -1,23 +1,37 @@
-<!DOCTYPE html>
-<html>
+\<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <title>3DES Secure Notes</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
+<div class="site-title">
+    <h1>3DES SECURE NOTES</h1>
+    <p>Secure personal note system using 3DES encryption</p>
+</div>
+
 <div class="container">
 
-        <div class="site-header">
-            <h1>Note down your important things</h1>
-            <p>Personal notes encrypted using 3DES algorithm</p>
-        </div>
-    
-        <h2>Login</h2>
+    <h2>Note down your important things</h2>
+    <p class="subtitle">Personal notes encrypted using 3DES algorithm</p>
 
     <form method="POST">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
+        <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            required
+        >
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+        >
+
         <button type="submit">Login</button>
     </form>
 
@@ -25,6 +39,7 @@
         Don’t have an account?
         <a href="/register">Register</a>
     </div>
+
 </div>
 
 </body>
